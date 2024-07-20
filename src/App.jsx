@@ -24,6 +24,7 @@ const GlobalFont = createGlobalStyle`
   a { 
     text-decoration: none;
     transition: 150ms ease-in;
+    color: black;
 
     &:visited {
       color: black
