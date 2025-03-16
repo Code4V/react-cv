@@ -6,7 +6,7 @@ import { Navigation } from "./components/Navigation";
 import { Outlet } from "react-router-dom";
 import React, { Suspense } from "react";
 
-const GlobalFont = createGlobalStyle`
+export const GlobalFont = createGlobalStyle`
   @font-face {
     font-family: 'DM Sans';
     src: url(${DMSans});

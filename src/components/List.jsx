@@ -7,7 +7,7 @@ const ListContainer = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin-block-start: 16px;
+  margin-block: 8px;
   font-weight: 300;
   line-height: 1.65rem;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App, { GlobalFont, MainContainer } from "./App.jsx";
 import "./stylus/Reset.styl";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./components/Error.jsx";
@@ -28,6 +28,15 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: "/test",
+    element: 
+    <MainContainer>
+      <GlobalFont />
+      <Project />
+    </MainContainer>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

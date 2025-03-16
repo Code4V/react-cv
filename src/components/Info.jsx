@@ -42,8 +42,6 @@ export default class Info extends React.Component {
         ) : (
           ""
         )}
-        <InfoBody> {this.props.body} </InfoBody>
-
         {this.props.list ? (
           <List
             $isFlex={this.props.$isFlex}
@@ -53,6 +51,8 @@ export default class Info extends React.Component {
         ) : (
           ""
         )}
+        <InfoBody> {this.props.body} </InfoBody>
+
       </InfoContainer>
     );
   }
