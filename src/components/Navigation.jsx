@@ -6,20 +6,41 @@ import { IconContext } from "react-icons";
 
 const NavigationContainer = styled.nav`
   position: sticky;
-  top: 16px;
-  max-width: inherit;
+  top: 0px;
   word-wrap: break-word;
+  flex-flow: row wrap;
   display: flex;
-  flex-flow: column wrap;
+  width: 100%;
   align-content: center;
+  padding-block: 16px;
+  padding-inline: 32px;
   height: fit-content;
+  z-index: 50;
+  background-color: var(--backgroundColor);
+  
+  grid-column: span 5;
+  margin-inline: auto;
+  border-bottom: 1px solid var(--fontColor);
+  
+  
+  @media screen and (min-width: 900px) {
+    top: 16px;
+    grid-row: 1 / 2;
+    grid-column: 1;
+    max-width: inherit;
+    border: 0;
+    border-right: 1px solid var(--fontColor);
+    flex-flow: column wrap;
 
-  grid-row: 1/2;
+  }
+
 `;
 
 const ProfileWrapper = styled.div`
+  transform: scale(75%);
   width: 100px;
-  transition: 500ms ease-in transform;
+  transition: 500ms  cubic-bezier(.07,.81,.44,.32) transform;
+  margin-inline-end: 2rem;
 
   &:hover {
     transform: rotate(-15deg);
@@ -27,8 +48,11 @@ const ProfileWrapper = styled.div`
 `;
 const ProfilePicture = styled.span`
   display: inline-block;
-  background-color: black;
-  color: white;
+
+  background-color: var(--fontColor);
+  color: var(--backgroundColor);
+  transition: 500ms ease-in;
+
   width: inherit;
   height: 100px;
   border-radius: 100svh;
@@ -38,21 +62,50 @@ const ProfilePicture = styled.span`
   font-size: 2rem;
   line-height: 6rem;
   font-family: "DM Serif Display";
-`;
 
-const ProfileNav = styled.nav``;
+
+  &:hover {
+    background-color: var(--secondaryColor)
+  }
+`;  
+
+const ProfileNav = styled.nav`
+  margin-inline-start: auto;
+  
+  @media screen and (min-width: 900px) {
+  margin-inline-start: 0;
+}
+`;
 
 const ProfileList = styled.ul`
   list-style: none;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 100%;
+  margin-inline-start: auto;
+  
+  @media screen and (min-width: 900px) {
+  align-items: start;
+  flex-flow: column wrap;
+  margin-inline-start: 0;
+  height: auto;
+}
 `;
 
 const ProfileListItem = styled.li`
   display: flex;
   gap: 0.5rem;
-  margin-block-start: 1.5rem;
   font-weight: 300;
   text-decoration: none;
   align-items: flex-start;
+  flex-flow: row wrap;
+  font-size: 1rem;
+  
+  @media screen and (min-width: 900px) {
+    flex-flow: column wrap;
+    margin-block-start: 1.5rem;
+}
 `;
 
 export class Navigation extends React.Component {
@@ -61,6 +114,7 @@ export class Navigation extends React.Component {
     this.links = [
       { linkTo: "/", linkName: "About" },
       { linkTo: "Projects", linkName: "Projects" },
+      { linkTo: "Other", linkName: "Other" },
       { linkTo: "Contact", linkName: "Contact" },
     ];
   }

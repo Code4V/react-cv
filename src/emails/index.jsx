@@ -1,4 +1,4 @@
-import { CodeBlock, Column,  Container, Button, dracula, Html, Row, Section,  Tailwind, Text, Head, Font } from "@react-email/components";
+import {  Column,  Container, Button, Html, Row, Section,  Tailwind, Text, Head, Font } from "@react-email/components";
 import * as React from "react";
 
 export default function Email({userName, userInquiry, dateToday = new Date().toDateString()}) {

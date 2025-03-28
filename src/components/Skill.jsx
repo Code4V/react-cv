@@ -6,7 +6,7 @@ const SkillContainer = styled.section`
   display: flex;
   position: relative;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   padding: 0.5rem;
   ${(props) =>
     props.$learning &&

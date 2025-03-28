@@ -5,7 +5,19 @@
 
 *, *::after, *::before
   box-sizing border-box
+  font-size: .95rem;
 
 :root 
-  background-color rgb(242, 242, 242)
+  // Light Mode
+  // --fontColor: hsl(261, 81%, 14%) 
+  // --backgroundColor: hsl(27, 62%, 72%)
+  // --secondaryColor: hsl(276, 67%, 29%)
+
+
+  // Dark Mode
+  --fontColor: hsl(27, 62%, 72%)
+  --backgroundColor:hsl(261, 81%, 14%)  
+  --secondaryColor: hsl(34, 75.50%, 53.50%);
+  background-color: var(--backgroundColor)
+  color: var(--fontColor)
   // font-family: 'WorkSans'

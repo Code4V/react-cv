@@ -4,16 +4,23 @@ import { Header } from "./Header";
 import Info from "./Info";
 import { about } from "../data/data";
 import { FaGithub, FaHtml5, FaCss3Alt, FaReact, FaJava, FaC, FaPython, FaFileExcel, FaFileWord, FaFilePowerpoint, FaFigma, FaWordpress, FaGit } from "react-icons/fa6";
-import { SiPhp, SiJavascript, SiCplusplus, SiCsharp, SiAdobephotoshop, SiAdobepremierepro, SiVega } from "react-icons/si";
+import { SiPhp, SiJavascript, SiCplusplus, SiCsharp, SiAdobephotoshop, SiAdobepremierepro, SiVega, SiMysql, SiPostgresql } from "react-icons/si";
 import { SkillList } from "./SkillList";
 
 export const MainWrapper = styled.section`
-  padding-inline: 16px;
+  padding-inline: 24px;
+  padding-block-start: 32px;
   display: grid;
+  gap: .5rem;
 
   grid-template-columns: subgrid;
-  grid-column: 2 / 6;
+  grid-column: 1 / 6;
   grid-template-rows: repeat(6, auto);
+
+  @media screen and (min-width: 900px) {
+    grid-column: 2 / 6;
+    padding-block-start: 0;
+  }
 `;
 
 const ImagePreloader = styled.div`
@@ -23,10 +30,6 @@ const ImagePreloader = styled.div`
 `;
 
 const proficientList = [
-  {
-    icon: FaGithub(),
-    skillName: "Github",
-  },
   {
     icon: SiPhp(),
     skillName: "PHP",
@@ -50,6 +53,14 @@ const proficientList = [
   {
     icon: FaGit(),
     skillName: "Git"
+  },
+  {
+    icon: SiMysql(),
+    skillName: "MySQL"
+  },
+  {
+    icon: SiPostgresql(),
+    skillName: "PostgresSQL"
   },
 ];
 
@@ -82,6 +93,10 @@ const basicList = [
 ]
 
 const othersList = [
+  {
+    icon: FaGithub(),
+    skillName: "Github",
+  },
   {
     icon: FaFileExcel(),
     skillName: "MS Excel"
@@ -136,6 +151,7 @@ export default class About extends React.Component {
               $rowspanend={$rowspanend}
               $hasPaddingInlineEnd={$hasPaddingInlineEnd}
               $isFlex={$isFlex}
+              img={info.img}
               key={key}
               header={info.header}
               subheader={info.subheader}

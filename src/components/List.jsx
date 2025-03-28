@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ListContainer = styled.ul`
   ${(props) => props.$isFlex && `display: flex;`}
   ${(props) => props.$gapSize && `gap: ${props.$gapSize};`}
+  margin-block-start: 8px;
 `;
 
 const ListItem = styled.li`

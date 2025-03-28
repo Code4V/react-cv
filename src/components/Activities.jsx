@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { MainWrapper } from "./About";
 import Info from "./Info";
-import { project } from "../data/data";
+import { other } from "../data/data";
 
-const { projects } = project;
+const { activities } = other;
 
 const ProjectContainer = styled(MainWrapper)`
   margin-block-end: 4rem;
@@ -26,7 +26,6 @@ const ProjectHeader = styled.h2`
 
 const ProjectLink = styled.a`
   display: inline-block;
-  margin-block-end: 1rem;
   padding: 1rem .75rem;
   border: 1px solid;
   grid-column: span 2;
@@ -45,12 +44,12 @@ const ProjectLink = styled.a`
 const InfoWrapper = styled.div`
 `;
 
-export class Project extends React.Component {
+export class Activities extends React.Component {
   render() {
     return (
       <ProjectContainer>
-        <ProjectHeader> Projects Involved </ProjectHeader>
-        {projects.map((proj, key) => {
+        <ProjectHeader> My Other Works </ProjectHeader>
+        {activities.map((proj, key) => {
           const {
             $colspanstart,
             $hasPaddingInlineEnd,
@@ -65,15 +64,15 @@ export class Project extends React.Component {
                 $colspanend={6}
                 $isFlex={true}
                 $gapSize={".8rem"}
-                header={proj.header}
                 subheader={proj.subheader}
+                header={proj.header}
                 body={proj.body}
                 list={proj.list.map(e => e + ' |')}
                 img={proj.img}
                 key={key}
                 alt={proj.alt}
                 />
-              <ProjectLink href={proj.link} target="_blank"> Go to Project Link </ProjectLink>
+              <ProjectLink href={proj.link} target="_blank"> Go to Website Link </ProjectLink>
             </>
           );
         })}
@@ -82,4 +81,4 @@ export class Project extends React.Component {
   }
 }
 
-export {ProjectLink};
+// export {Activities};

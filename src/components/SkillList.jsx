@@ -7,18 +7,25 @@ const SkillListContainer = styled.ul`
   display: flex;
   align-items: center;
   flex-flow: row wrap;
-  margin-block-start: 2rem;
+  margin-block-start: 48px;
   border: 1px solid;
   position: relative;
-  padding: 0.5rem 0.5rem;
-  ${(props) =>
-    props.$colspanstart && `grid-column-start: ${props.$colspanstart};`}
-  ${(props) => props.$colspanend && `grid-column-end: ${props.$colspanend};`}
+  padding: 1rem .5rem;
+  grid-column-start: 1;
+  grid-column-end: 6;
+
+  gap: 1rem;
   ${(props) => props.$rowspanstart && `grid-row-start: ${props.$rowspanstart};`}
   ${(props) => props.$rowspanend && `grid-row-end: ${props.$rowspanend};`}
   ${(props) =>
     props.$hasSubheading &&
-    `&::after { content: "${props.$hasSubheading}"; position: absolute; top: -10px; left: 0; background-color: white; padding-inline: .5rem; font-weight: 600}`}
+    `&::after { content: "${props.$hasSubheading}"; position: absolute; top: -10px; left: 0; background-color: var(--backgroundColor); color: var(--secondaryColor); padding-inline: .5rem; font-weight: 600}`}
+    
+    @media screen and (min-width: 900px) {
+    ${(props) =>
+      props.$colspanstart && `grid-column-start: ${props.$colspanstart};`}
+    ${(props) => props.$colspanend && `grid-column-end: ${props.$colspanend};`}
+  }
 `;
 
 const SkillListItem = styled.li``;

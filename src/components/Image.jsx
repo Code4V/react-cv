@@ -8,7 +8,7 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageDisplay = styled.img`
-  object-fit: cover;
+  object-fit: fill;
   transition: 150ms ease-in-out filter;
   filter: grayscale(1);
 

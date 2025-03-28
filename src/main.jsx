@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./components/Error.jsx";
 import About from "./components/About.jsx";
 import { Project } from "./components/Project.jsx";
+import { Activities } from "./components/Activities.jsx";
 import { Contact } from "./components/Contact.jsx";
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/Projects",
         element: <Project />,
+      },
+      {
+        path: "/Other",
+        element: <Activities />,
       },
       {
         path: "/Contact",

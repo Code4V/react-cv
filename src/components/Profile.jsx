@@ -21,7 +21,8 @@ const ProfileInfoName = styled.p`
 const ProfileInfoPosition = styled.p`
   margin-block-start: 0.5rem;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: uppercase;  
+  color: var(--secondaryColor)
 `;
 
 const ProfilePicContainer = styled.div`

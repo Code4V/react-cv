@@ -16,8 +16,11 @@ const InfoBody = styled.p`
 
 const InfoSubHeader = styled.span`
   display: inline-block;
-  margin-block-start: 0.5rem;
+  margin-block-start: 0.7rem;
+  line-height: 1.35rem;
   font-weight: 500;
+  color: var(--secondaryColor);
+
 `;
 
 export default class Info extends React.Component {
@@ -38,7 +41,7 @@ export default class Info extends React.Component {
           )}
         <InfoHeader> {this.props.header} </InfoHeader>
         {this.props.subheader ? (
-          <InfoSubHeader> {this.props.subheader} </InfoSubHeader>
+          <InfoSubHeader> {this.props.subheader}</InfoSubHeader> 
         ) : (
           ""
         )}
@@ -59,10 +62,16 @@ export default class Info extends React.Component {
 }
 const InfoContainer = styled.div`
   margin-block-start: 2rem;
-  ${(props) =>
-    props.$colspanstart && `grid-column-start: ${props.$colspanstart};`}
-  ${(props) => props.$colspanend && `grid-column-end: ${props.$colspanend};`}
+  
+  grid-column-start: 1;
+  grid-column-end: 6;
   ${(props) => props.$rowspanstart && `grid-row-start: ${props.$rowspanstart};`}
   ${(props) => props.$rowspanend && `grid-row-end: ${props.$rowspanend};`}
   ${(props) => props.$hasPaddingInlineEnd && `padding-inline-end: 32px;`}
+  
+  @media screen and (min-width: 900px) {
+    ${(props) => props.$colspanstart && `grid-column-start: ${props.$colspanstart};`}
+    ${(props) => props.$colspanend && `grid-column-end: ${props.$colspanend};`}
+    ${(props) => props.$rowspanstart && `grid-row-start: ${props.$rowspanstart};`}
+  }
 `;
