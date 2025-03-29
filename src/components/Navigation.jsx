@@ -8,19 +8,25 @@ const NavigationContainer = styled.nav`
   position: sticky;
   top: 0px;
   word-wrap: break-word;
-  flex-flow: row wrap;
   display: flex;
+  flex-flow: column wrap;
   width: 100%;
   align-content: center;
   padding-block: 16px;
-  padding-inline: 32px;
   height: fit-content;
+  justify-content: center;
   z-index: 50;
   background-color: var(--backgroundColor);
   
   grid-column: span 5;
-  margin-inline: auto;
   border-bottom: 1px solid var(--fontColor);
+  
+  @media screen and (min-width: 450px) {
+    flex-flow: row wrap;
+    margin-inline: auto;
+    padding-inline: 32px;
+    justify-content: auto;
+  }
   
   
   @media screen and (min-width: 900px) {
@@ -39,11 +45,17 @@ const NavigationContainer = styled.nav`
 const ProfileWrapper = styled.div`
   transform: scale(75%);
   width: 100px;
+  margin-inline: auto;
   transition: 500ms  cubic-bezier(.07,.81,.44,.32) transform;
-  margin-inline-end: 2rem;
-
+  
   &:hover {
     transform: rotate(-15deg);
+    }
+    
+    @media screen and (min-width: 450px) {
+      margin-inline: 0; 
+      margin-inline-end: 2rem;
+
   }
 `;
 const ProfilePicture = styled.span`
@@ -70,8 +82,14 @@ const ProfilePicture = styled.span`
 `;  
 
 const ProfileNav = styled.nav`
+margin-block-start: 8px;
+
+@media screen and (min-width: 450px) {
   margin-inline-start: auto;
-  
+
+  margin-block-start: 0;
+
+}
   @media screen and (min-width: 900px) {
   margin-inline-start: 0;
 }

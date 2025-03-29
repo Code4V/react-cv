@@ -29,7 +29,11 @@ const ProjectLink = styled.a`
   margin-block-end: 1rem;
   padding: 1rem .75rem;
   border: 1px solid;
-  grid-column: span 2;
+  grid-column: span 5;
+
+  @media screen and (min-width: 450px) {
+    grid-column: span 2;
+  }
   
   @media screen and (min-width: 900px) {
     grid-column: span 1;

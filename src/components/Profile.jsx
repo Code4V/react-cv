@@ -32,15 +32,24 @@ const ProfilePicContainer = styled.div`
 `;
 
 const ProfilePic = styled.img`
-  object-fit: cover;
-  object-position: 0 -300px;
-  padding-block-end: 100px;
+  object-fit: fill;
+  height: 100%;
+  // padding-block-end: 100px;
   filter: grayscale(1);
   transition: 150ms ease-in-out filter;
-
+  
   &:hover {
     filter: none;
+    }
+
+  @media screen and (min-width: 450px) { 
+    object-position: 0 -200px;
   }
+    
+  @media screen and (min-width: 900px) {
+    object-position: 0 -300px;
+  }
+  
 `;
 
 export class ProfileInfoClass extends React.Component {

@@ -20,7 +20,7 @@ export const about = {
       },
     },
     {
-      header: "Work Experience --------------------------",
+      header: "Work Experience",
       subheader: "My professional journey",
       styles: {
         $colspanstart: 1,

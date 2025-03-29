@@ -67,11 +67,11 @@ const InfoContainer = styled.div`
   grid-column-end: 6;
   ${(props) => props.$rowspanstart && `grid-row-start: ${props.$rowspanstart};`}
   ${(props) => props.$rowspanend && `grid-row-end: ${props.$rowspanend};`}
-  ${(props) => props.$hasPaddingInlineEnd && `padding-inline-end: 32px;`}
   
   @media screen and (min-width: 900px) {
     ${(props) => props.$colspanstart && `grid-column-start: ${props.$colspanstart};`}
     ${(props) => props.$colspanend && `grid-column-end: ${props.$colspanend};`}
     ${(props) => props.$rowspanstart && `grid-row-start: ${props.$rowspanstart};`}
+    ${(props) => props.$hasPaddingInlineEnd && `padding-inline-end: 32px;`}
   }
 `;
