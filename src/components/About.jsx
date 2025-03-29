@@ -9,7 +9,7 @@ import { SkillList } from "./SkillList";
 
 export const MainWrapper = styled.section`
   padding-inline: 24px;
-  padding-block-start: 32px;
+  margin-block-start: 32px;
   display: grid;
   gap: .5rem;
 
@@ -19,7 +19,7 @@ export const MainWrapper = styled.section`
 
   @media screen and (min-width: 900px) {
     grid-column: 2 / 6;
-    padding-block-start: 0;
+    margin-block-start: 0;
   }
 `;
 

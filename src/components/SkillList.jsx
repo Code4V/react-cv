@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Skill } from "./Skill";
 import { Empty } from "./Empty";
+import Pattern from "./../assets/rebel.png";
 
 const SkillListContainer = styled.ul`
   display: flex;
@@ -19,7 +20,7 @@ const SkillListContainer = styled.ul`
   ${(props) => props.$rowspanend && `grid-row-end: ${props.$rowspanend};`}
   ${(props) =>
     props.$hasSubheading &&
-    `&::after { content: "${props.$hasSubheading}"; position: absolute; top: -10px; left: 0; background-color: var(--backgroundColor); color: var(--secondaryColor); padding-inline: .5rem; font-weight: 600}`}
+    `&::after { content: "${props.$hasSubheading}"; position: absolute; top: -10px; left: 0; background-color: var(--backgroundColor); color: var(--secondaryColor); padding-inline: .5rem; font-weight: 600; background-image: url(${Pattern})}`}
     
     @media screen and (min-width: 900px) {
     ${(props) =>

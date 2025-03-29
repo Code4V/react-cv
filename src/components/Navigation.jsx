@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Pattern from "./../assets/rebel.png";
 import { IoPersonCircle, IoBriefcase, IoCall } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
@@ -16,6 +17,7 @@ const NavigationContainer = styled.nav`
   height: fit-content;
   justify-content: center;
   z-index: 50;
+  background-image: url(${Pattern});
   background-color: var(--backgroundColor);
   
   grid-column: span 5;

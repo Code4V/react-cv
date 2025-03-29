@@ -35,10 +35,10 @@ export default class Info extends React.Component {
         key={this.props.keyb}
       >
         {this.props.img ? (
-            <Image src={this.props.img} alt={ this.props.alt }/>
-          ) : (
-            ""
-          )}
+          <Image src={this.props.img} alt={ this.props }/>
+        ) : (
+          ""
+        )}
         <InfoHeader> {this.props.header} </InfoHeader>
         {this.props.subheader ? (
           <InfoSubHeader> {this.props.subheader}</InfoSubHeader> 
