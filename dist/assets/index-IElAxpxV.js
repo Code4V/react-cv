@@ -303,13 +303,13 @@ margin-block-start: 8px;
   margin-block-end: 16px;
 `,r3=me.img`
   object-fit: fill;
-  transition: 1200ms cubic-bezier(0,1.1,.96,.53) filter;
+  transition: 800ms cubic-bezier(0,1.1,.96,.53) filter;
   filter: grayscale(1) blur(4px);
 
   &:hover {
     filter: none;
   }
-`;class i3 extends ze.Component{render(){return K.jsx(n3,{children:K.jsx(t3,{children:({inView:l,ref:a,entry:u})=>K.jsx(r3,{style:l?{filter:"none"}:{filter:"grayscale(1) blur(4px)"},ref:a,src:this.props.src,alt:this.props.alt.alt})})})}}const l3=me.h2`
+`;class i3 extends ze.Component{render(){return K.jsx(n3,{children:K.jsx(t3,{delay:300,children:({inView:l,ref:a})=>K.jsx(r3,{style:l?{filter:"none"}:{filter:"grayscale(1) blur(4px)"},ref:a,src:this.props.src,alt:this.props.alt.alt})})})}}const l3=me.h2`
   font-weight: 700;
   font-size: 1.5rem;
 `,o3=me.p`
