@@ -37,7 +37,7 @@ const NavigationContainer = styled.nav`
     grid-column: 1;
     max-width: inherit;
     border: 0;
-    border-right: 1px solid var(--fontColor);
+    // border-right: 1px solid var(--fontColor);
     flex-flow: column wrap;
 
   }
@@ -133,9 +133,9 @@ export class Navigation extends React.Component {
     super();
     this.links = [
       { linkTo: "/", linkName: "About" },
-      { linkTo: "Projects", linkName: "Projects" },
-      { linkTo: "Other", linkName: "Other" },
-      { linkTo: "Contact", linkName: "Contact" },
+      { linkTo: "projects", linkName: "Projects" },
+      { linkTo: "other", linkName: "Other" },
+      { linkTo: "contact#contact", linkName: "Contact" },
     ];
   }
   render() {

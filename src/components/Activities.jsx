@@ -67,6 +67,7 @@ export class Activities extends React.Component {
               <Info
                 $colspanstart={1}
                 $colspanend={6}
+                delay={key * 0.2}
                 $isFlex={true}
                 $gapSize={".8rem"}
                 subheader={proj.subheader}
@@ -76,8 +77,8 @@ export class Activities extends React.Component {
                 img={proj.img}
                 key={key}
                 alt={proj.alt}
+                link={proj.link}
                 />
-              <ProjectLink href={proj.link} target="_blank"> Go to Website Link </ProjectLink>
             </>
           );
         })}

@@ -20,43 +20,6 @@ export const about = {
       },
     },
     {
-      header: "Work Experience",
-      subheader: "My professional journey",
-      styles: {
-        $colspanstart: 1,
-        $colspanend: 6,
-        $hasPaddingInlineEnd: true,
-      },
-    },
-    {
-      header: "Remotasks",
-      subheader: "Freelancer - 3D LiDAR Contributor / Reviewer | Jan 2024 - Feb 2025",
-      list: [
-        "•	Collaborated with hundreds of other freelancers to deliver quality 3D LiDAR Data that meets the client’s expectation.",
-        "•  Quickly adapted with the changing ruleset of the client requirements.",
-        "•	Reviewed and delivered over 200 tasks and maintained over 95% accuracy"
-      ],
-      styles: {
-        $colspanstart: 2,
-        $colspanend: 6,
-        $hasPaddingInlineEnd: true,
-      },
-    },
-    {
-      header: "Erovoutika",
-      subheader: "Web Developer Intern | March – July 2023",
-      list: [
-        "•	Collaborated with web developers interns to develop the Erovoutika Exam Website during the internship period.",
-        "•	Effectively utilized GitHub for collaborations and code reviews, which improved code sharing and code management",
-        "•	Taught several programming topics such as Git, C++, PHP, XAMPP, and HTML as part of the internship program",
-      ],
-      styles: {
-        $colspanstart: 1,
-        $colspanend: 4,
-        $hasPaddingInlineEnd: true,
-      },
-    },
-    {
       header: "Curriculum Vitae",
       subheader: "Education",
       list: [
@@ -70,6 +33,67 @@ export const about = {
         $rowspanstart: 3,
         $rowspanend: 5,
         $isFlex: false,
+      },
+    },
+    {
+      header: "Work experience",
+      subheader: "My professional journey",
+      styles: {
+        $colspanstart: 1,
+        $colspanend: 6,
+        $haspaddinginlineend: true,
+      },
+    },
+    // {
+    //   img: Lakbay,
+    //   styles: {
+    //     $colspanstart: 1,
+    //     $colspanend: 2,
+    //     // $rowspanstart: 6,
+    //     $isFlex: false,
+    //     $hasPaddingInlineEnd: true,
+    //   },
+    // },
+    {
+      header: "Remotasks",
+      subheader: "Freelancer - 3D LiDAR Contributor / Reviewer | Jan 2024 - Feb 2025",
+      list: [
+        "•	Collaborated with hundreds of other freelancers to deliver quality 3D LiDAR Data that meets the client’s expectation.",
+        "•  Quickly adapted with the changing ruleset of the client requirements.",
+        "•	Reviewed and delivered over 200 tasks and maintained over 95% accuracy"
+      ],
+      styles: {
+        $colspanstart: 1,
+        $colspanend: 6,
+        $hasPaddingInlineStart: true,
+        $haspaddinginlineEnd: true
+      },
+    },
+    // {
+    //   img: Lakbay,
+    //   styles: {
+    //     $colspanstart: 4,
+    //     // $colspanend: 5,
+    //     // $rowspanstart: 7,
+    //     $isFlex: false,
+    //     $rowspan: 'span 2',
+    //     $hasPaddingInlineEnd: true
+    //   },
+    // },
+    {
+      header: "Erovoutika",
+      subheader: "Web Developer Intern | March – July 2023",
+      list: [
+        "•	Collaborated with web developers interns to develop the Erovoutika Exam Website during the internship period.",
+        "•	Effectively utilized GitHub for collaborations and code reviews, which improved code sharing and code management",
+        "•	Taught several programming topics such as Git, C++, PHP, XAMPP, and HTML as part of the internship program",
+      ],
+      styles: {
+        $colspanstart: 1,
+        $colspanend: 6,
+        $rowspanstart: 7,
+        $hasPaddingInlineStart: true,
+        $haspaddinginlineEnd: true
       },
     },
     {

@@ -2,8 +2,9 @@ import { createGlobalStyle, styled } from "styled-components";
 import "./stylus/index.styl";
 import DMSans from "./assets/fonts/DMSans.ttf";
 import DMSerif from "./assets/fonts/DMSerifDisplay.ttf";
-import Pattern from "./assets/rebel.png";
+import Pattern from "./assets/rebel.png";   
 import Aragorn from "./assets/fonts/Aragorn.ttf";
+import SFMono from "./assets/fonts/SFMono-Regular.otf";
 import { Navigation } from "./components/Navigation";
 import { Outlet } from "react-router-dom";
 import React, { Suspense } from "react";
@@ -12,6 +13,11 @@ export const GlobalFont = createGlobalStyle`
   @font-face {
     font-family: 'DM Sans';
     src: url(${DMSans});
+  }
+
+  @font-face {
+    font-family: 'SF Mono';
+    src: url(${SFMono});
   }
 
   @font-face {
@@ -25,7 +31,7 @@ export const GlobalFont = createGlobalStyle`
   }
 
   body {
-    font-family: 'Aragorn';
+    font-family: 'SF Mono';
     background-image: url(${Pattern});
     // font-family: 'DM Sans';
   };

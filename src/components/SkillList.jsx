@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Skill } from "./Skill";
 import { Empty } from "./Empty";
 import Pattern from "./../assets/rebel.png";
+import { motion } from "framer-motion";
 
-const SkillListContainer = styled.ul`
+const SkillListContainer = styled(motion.ul)`
   display: flex;
   align-items: center;
   flex-flow: row wrap;
@@ -40,6 +41,9 @@ export class SkillList extends React.Component {
   render() {
     return (
       <SkillListContainer
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0}} 
+        transition={{delay: this.props.delay ?? '0', staggerChildren: 0.3, when: 'beforeChildren' }}
         $colspanstart={this.props.$colspanstart}
         $colspanend={this.props.$colspanend}
         $rowspanstart={this.props.$rowspanstart}

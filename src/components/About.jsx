@@ -138,18 +138,23 @@ export default class About extends React.Component {
           const {
             $colspanstart,
             $hasPaddingInlineEnd,
+            $hasPaddingInlineStart,
             $colspanend,
             $rowspanend,
+            $rowspan,
             $rowspanstart,
             $isFlex,
           } = info.styles ?? "";
           return (
             <Info
+              delay={key * 0.2}
               $colspanstart={$colspanstart}
               $colspanend={$colspanend}
               $rowspanstart={$rowspanstart}
               $rowspanend={$rowspanend}
+              $rowspan={$rowspan}
               $hasPaddingInlineEnd={$hasPaddingInlineEnd}
+              $hasPaddingInlineStart={$hasPaddingInlineStart}
               $isFlex={$isFlex}
               img={info.img}
               key={key}
@@ -179,6 +184,8 @@ export default class About extends React.Component {
             <SkillList
               $colspanstart={1}
               $colspanend={5}
+              delay={key * .6}
+              key={key}
               $hasSubheading={subHeading}
               skills={list}
             />
