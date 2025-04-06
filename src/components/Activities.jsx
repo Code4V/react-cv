@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MainWrapper } from "./About";
 import Info from "./Info";
 import { other } from "../data/data";
+import { motion } from "framer-motion";
 
 const { activities } = other;
 
@@ -11,7 +12,7 @@ const ProjectContainer = styled(MainWrapper)`
   gap: 1.5rem
 `;
 
-const ProjectHeader = styled.h2`
+const ProjectHeader = styled(motion.h2)`
   font-size: 2.5rem;
   font-weight: 700;
 
@@ -53,7 +54,10 @@ export class Activities extends React.Component {
   render() {
     return (
       <ProjectContainer>
-        <ProjectHeader> My Other Works </ProjectHeader>
+        <ProjectHeader
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0}} 
+        > My Other Works </ProjectHeader>
         {activities.map((proj, key) => {
           const {
             $colspanstart,

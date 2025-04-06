@@ -6,6 +6,7 @@ import { about } from "../data/data";
 import { FaGithub, FaHtml5, FaCss3Alt, FaReact, FaJava, FaC, FaPython, FaFileExcel, FaFileWord, FaFilePowerpoint, FaFigma, FaWordpress, FaGit } from "react-icons/fa6";
 import { SiPhp, SiJavascript, SiCplusplus, SiCsharp, SiAdobephotoshop, SiAdobepremierepro, SiVega, SiMysql, SiPostgresql } from "react-icons/si";
 import { SkillList } from "./SkillList";
+import { motion } from "framer-motion";
 
 export const MainWrapper = styled.section`
   padding-inline: 24px;
@@ -43,12 +44,16 @@ const proficientList = [
     skillName: "HTML",
   },
   {
-    icon: FaCss3Alt(),
-    skillName: "CSS",
-  },
-  {
     icon: FaReact(),
     skillName: "React",
+  },
+  {
+    icon: SiPostgresql(),
+    skillName: "PostgresSQL"
+  },
+  {
+    icon: FaCss3Alt(),
+    skillName: "CSS",
   },
   {
     icon: FaGit(),
@@ -57,10 +62,6 @@ const proficientList = [
   {
     icon: SiMysql(),
     skillName: "MySQL"
-  },
-  {
-    icon: SiPostgresql(),
-    skillName: "PostgresSQL"
   },
 ];
 
@@ -139,6 +140,7 @@ export default class About extends React.Component {
             $colspanstart,
             $hasPaddingInlineEnd,
             $hasPaddingInlineStart,
+            $hasBorderInlineStart,
             $colspanend,
             $rowspanend,
             $rowspan,
@@ -155,6 +157,7 @@ export default class About extends React.Component {
               $rowspan={$rowspan}
               $hasPaddingInlineEnd={$hasPaddingInlineEnd}
               $hasPaddingInlineStart={$hasPaddingInlineStart}
+              $hasBorderInlineStart={$hasBorderInlineStart}
               $isFlex={$isFlex}
               img={info.img}
               key={key}

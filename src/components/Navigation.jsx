@@ -17,21 +17,21 @@ const NavigationContainer = styled.nav`
   height: fit-content;
   justify-content: center;
   z-index: 50;
-  background-image: url(${Pattern});
-  background-color: var(--backgroundColor);
   
   grid-column: span 5;
   border-bottom: 1px solid var(--fontColor);
+  background-color: var(--backgroundColor);
+  background-image: url(${Pattern});
   
   @media screen and (min-width: 450px) {
     flex-flow: row wrap;
     margin-inline: auto;
     padding-inline: 32px;
     justify-content: auto;
-  }
-  
-  
-  @media screen and (min-width: 900px) {
+    }
+    
+    
+    @media screen and (min-width: 900px) {
     top: 16px;
     grid-row: 1 / 2;
     grid-column: 1;

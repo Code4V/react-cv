@@ -7,6 +7,8 @@ import { ProjectLink } from "./Project";
 import { ProfileInfoClass } from "./Profile";
 import { MainWrapper } from "./About";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 
 const ContactWrapper = styled(MainWrapper)`
   margin-block-end: 100vh;
@@ -19,7 +21,7 @@ const ContactWrapper = styled(MainWrapper)`
 const ContactLink = styled(ProjectLink)`
 `;
 
-const ContactHeader = styled.h2`
+const ContactHeader = styled(motion.h2)`
   font-size: 2.5rem;
   font-weight: 700;
 
@@ -51,7 +53,10 @@ export class Contact extends React.Component {
 
     return (
       <ContactWrapper id="contact">
-        <ContactHeader> Contact Me </ContactHeader>
+        <ContactHeader
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0}} 
+        > Contact Me </ContactHeader>
         <Info header="Email" subheader="rivasjeannefrancis@gmail.com" $colspanstart={1}/>
         <Info header="My Socials" list={list} $colspanstart={1}/>
         <Info header="Contact Number" list={["0995-200-1867 ( GLOBE )", "0967-004-3898 ( GOMO )"]} $colspanstart={1}/>

@@ -90,7 +90,7 @@ export class Project extends React.Component {
   }
 
   changeToFull = () => {
-    console.log(window.screenX)
+     
   }
 
   render() {

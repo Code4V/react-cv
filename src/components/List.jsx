@@ -58,7 +58,7 @@ export class List extends React.Component {
         {this.props.items ? (
           this.props.items.map((item, key) => {
             const {title, alink, icon } = item;
-            console.log(item, title ,alink)
+             
             return (
               <ListItem $isHighlighted={this.props.$isHighlighted} key={key}>
               { !item.alink ? (

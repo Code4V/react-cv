@@ -22,6 +22,7 @@ const InfoContainer = styled(motion.div)`
     ${(props) => props.$hasPaddingInlineEnd && `padding-inline-end: 32px;`}
     ${(props) => props.$hasPaddingInlineStart && `padding-inline-start: 32px;`}
     ${(props) => props.$rowspan && `grid-row: ${props.$rowspan};`}
+    ${(props) => props.$hasBorderInlineStart && `border-inline-start: 2px solid;`}
   }
 `;
 
@@ -100,12 +101,12 @@ export default class Info extends React.Component {
         $colspanend={this.props.$colspanend}
         $rowspanstart={this.props.$rowspanstart}
         $rowspanend={this.props.$rowspanend}
+        $hasBorderInlineStart={this.props.$hasBorderInlineStart}
         $hasPaddingInlineEnd={this.props.$hasPaddingInlineEnd}
         $hasPaddingInlineStart={this.props.$hasPaddingInlineStart}
         $rowspan={this.props.$rowspan}
         key={this.props.key}
       >
-        {console.log(this.props)}
         {this.props.img ? (
           <Image src={this.props.img} alt={ this.props }/>
         ) : (

@@ -10,13 +10,23 @@ import Newspaper from './../assets/newspaper.png';
 export const about = {
   info: [
     {
-      header: "About Me",
-      subheader: "Born in Quezon City",
-      body: "I'm an Information Technology student that loves exploring all things related to Techonology. I'm into building and programming web applications and websites, and I can see myself doing this for a pretty long time. \n\n Another thing that I'm into is teaching people on the basics of coding and assisting as much as I can. Because, I believe that everyone should at least learn the basics of coding for it will surely help them along their professional career.",
+      header: "Personal Info",
+      subheader: "Overview",
       styles: {
         $colspanstart: 1,
-        $colspanend: 3,
+        $colspanend: 6,
         $hasPaddingInlineEnd: true,
+      },
+    },
+    {
+      header: "About Me",
+      subheader: "Born in Quezon City",
+      body: "I'm an Information Technology student that loves exploring all things related to Techonology. I'm into building and programming web applications and websites, and I can see myself doing this for a pretty long time. \n\n Another thing that I'm into is teaching people on the basics of coding and assisting as much as I can.",
+      styles: {
+        $colspanstart: 1,
+        $colspanend: 6,
+        $hasPaddingInlineStart: true,
+        $hasBorderInlineStart: true,
       },
     },
     {
@@ -30,11 +40,13 @@ export const about = {
         "BS Information Technology",
       ],
       styles: {
-        $colspanstart: 3,
-        $colspanend: 5,
-        $rowspanstart: 3,
-        $rowspanend: 5,
+        $colspanstart: 1,
+        $colspanend: 6,
+        // $rowspanstart: 3,
+        // $rowspanend: 5,
         $isFlex: false,
+        $hasPaddingInlineStart: true,
+        $hasBorderInlineStart: true,
       },
     },
     {
@@ -68,7 +80,7 @@ export const about = {
         $colspanstart: 1,
         $colspanend: 6,
         $hasPaddingInlineStart: true,
-        $haspaddinginlineEnd: true
+        $hasBorderInlineStart: true,
       },
     },
     // {
@@ -95,6 +107,7 @@ export const about = {
         $colspanend: 6,
         $rowspanstart: 7,
         $hasPaddingInlineStart: true,
+        $hasBorderInlineStart: true,
         $haspaddinginlineEnd: true
       },
     },

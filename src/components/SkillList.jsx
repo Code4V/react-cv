@@ -12,6 +12,7 @@ const SkillListContainer = styled(motion.ul)`
   margin-block-start: 48px;
   border: 1px solid;
   position: relative;
+  justify-content: even;
   padding: 1rem .5rem;
   grid-column-start: 1;
   grid-column-end: 6;
