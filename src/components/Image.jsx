@@ -30,7 +30,7 @@ const ImageWrapper = styled.div`
     inset: 0;
     left: 0;
     width: 18px;
-    z-index: 99;
+    z-index: 2;
     opacity: 50%;
     background-color: var(--secondaryColor);
   }
