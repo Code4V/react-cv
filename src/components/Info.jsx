@@ -31,6 +31,7 @@ const InfoHeader = styled.h2`
 `;
 
 const InfoBody = styled.p`
+  // color: var(--bodyColor);
   margin-block-start: 1rem;
   line-height: 1.65rem;
   font-weight: 300;
@@ -48,7 +49,10 @@ const InfoSubHeader = styled.span`
 
 const ProjectLink = styled.a`
   display: inline-block;
-  margin-block-start: auto;
+  background-color: var(--fontColor);
+  color: var(--backgroundColor) !important;
+  font-weight: 600;
+  margin-block-start: .7rem;
   margin-block-end: 1rem;
   padding: 1rem .75rem;
   border: 1px solid;
@@ -117,6 +121,7 @@ export default class Info extends React.Component {
           <List
             $isFlex={this.props.$isFlex}
             $gapSize={this.props.$gapSize}
+            $isHighlighted={this.props.$isHighlighted}
             items={this.props.list}
           />
         ) : (

@@ -25,7 +25,9 @@ export const about = {
       list: [
         // "2013 - 2017 Flora A. Ylagan High School",
         // "2017 - 2019 ABE International Business College - ( TecVoc - ICT )",
-        "2019 - 2024 Polytechnic University of the Philippines - ( BS Information Technology )",
+        "2019 - 2024", 
+        "Polytechnic University of the Philippines", 
+        "BS Information Technology",
       ],
       styles: {
         $colspanstart: 3,

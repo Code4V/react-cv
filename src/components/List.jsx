@@ -8,8 +8,15 @@ const ListContainer = styled.ul`
 `;
 
 const ListItem = styled.li`
+  ${(props) => props.$isHighlighted && `
+    // background: var(--fontColor);
+    // color: var(--backgroundColor); 
+    letter-spacing: 1.5px;
+    border: 1px var(--fontColor) solid;
+    font-weight: 700;
+    padding-inline: 8px;
+    `};
   margin-block: 8px;
-  font-weight: 300;
   line-height: 1.65rem;
 `;
 
@@ -53,10 +60,10 @@ export class List extends React.Component {
             const {title, alink, icon } = item;
             console.log(item, title ,alink)
             return (
-              <ListItem key={key}>
+              <ListItem $isHighlighted={this.props.$isHighlighted} key={key}>
               { !item.alink ? (
                 <>
-                  { item } 
+                  { item } { (this.props.hasSeparator) ? " |" : '' }
                 </>)
                 : (
                 <LinkAnchor href={ alink } target="_blank">

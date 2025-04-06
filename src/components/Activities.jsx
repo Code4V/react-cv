@@ -70,10 +70,11 @@ export class Activities extends React.Component {
                 delay={key * 0.2}
                 $isFlex={true}
                 $gapSize={".8rem"}
+                $isHighlighted={true}
                 subheader={proj.subheader}
                 header={proj.header}
                 body={proj.body}
-                list={proj.list.map(e => e + ' |')}
+                list={proj.list}
                 img={proj.img}
                 key={key}
                 alt={proj.alt}

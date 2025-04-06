@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MainWrapper } from "./About";
 import Info from "./Info";
 import { project } from "../data/data";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const { projects } = project;
 
@@ -14,7 +14,7 @@ const ProjectContainer = styled(MainWrapper)`
   position: relative;
 `;
 
-const ProjectHeader = styled.h2`
+const ProjectHeader = styled(motion.h2)`
   font-size: 2.5rem;
   font-weight: 700;
 
@@ -96,7 +96,10 @@ export class Project extends React.Component {
   render() {
     return (
       <ProjectContainer onResize={this.changeToFull}>
-        <ProjectHeader> Projects Involved </ProjectHeader>
+        <ProjectHeader 
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0}} 
+        > Projects Involved </ProjectHeader>
         {/* <ContentViewType> */}
           {/* <span>
             View Mode:
@@ -122,11 +125,12 @@ export class Project extends React.Component {
               $colspan={"span 2"}
               $isFlex={true}
               $gapSize={".8rem"}
+              $isHighlighted={true}
               delay={key * 0.2}
               header={proj.header}
               subheader={proj.subheader}
               // body={proj.body}
-              list={proj.list.map(e => e + ' |')}
+              list={proj.list}
               img={proj.img}    
               key={key}
               alt={proj.alt}
@@ -155,10 +159,11 @@ export class Project extends React.Component {
               delay={key * 0.2}
               $isFlex={true}
               $gapSize={".8rem"}
+              $isHighlighted={true}
               header={proj.header}
               subheader={proj.subheader}
               body={proj.body}
-              list={proj.list.map(e => e + ' |')}
+              list={proj.list}
               img={proj.img}
               key={key + 1}
               alt={proj.alt}
